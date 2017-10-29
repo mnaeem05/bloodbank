@@ -102,6 +102,9 @@ constructor(props) {
                     case "auth/wrong-password": // wrong password on sign in
                         alert(e.message)
                         break;
+                    case "auth/invalid-email":
+                        alert("The email address is badly formatted.")
+                        break;
                     case "auth/user-not-found": // user not found on sign in on wrong email
                         alert(e.message)
                         break;
@@ -163,7 +166,7 @@ constructor(props) {
       floatingLabelText="Password"
       required
       maxLength= '8'
-      value={this.state.pwd} onChange={this.handleChangeUserPwd}
+      value={this.state.pwd || ''} onChange={this.handleChangeUserPwd}
     /><br />
           <div style={styles.block}>
         <Checkbox
