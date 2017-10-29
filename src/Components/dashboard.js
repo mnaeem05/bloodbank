@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import {AppBar, Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/';
-import {Drawer, RaisedButton, IconMenu, MenuItem, IconButton} from 'material-ui/';
+import {Drawer, MenuItem, IconButton} from 'material-ui/';
 import * as firebase from 'firebase';
 import CircularProgress from 'material-ui/CircularProgress';
-import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import { Link } from 'react-router-dom';
 
@@ -140,26 +139,28 @@ constructor(props) {
         <li>Insufficient sample – appropriate volume blood tubes are supplied with. Insufficient samples will mean an inability to test and delay in results and provision of blood products.</li>
         </ul>
   {this.state.users ?
-          <Table>
+          <Table style={{cursor: 'pointer'}}>
             <TableHeader>
               <TableRow>
-                <TableHeaderColumn>ID</TableHeaderColumn>
+                <TableHeaderColumn>S.No</TableHeaderColumn>
                 <TableHeaderColumn>Name</TableHeaderColumn>        
                 <TableHeaderColumn>Email</TableHeaderColumn>
                 <TableHeaderColumn>Age</TableHeaderColumn>
                 <TableHeaderColumn>Gender</TableHeaderColumn>
+                <TableHeaderColumn>Blood Group</TableHeaderColumn>
               </TableRow>
             </TableHeader>
             <TableBody>
               {
                 Object.keys(this.state.users).map((data, index) => {
                   return (
-                    <TableRow>
+                    <TableRow style={{color: "Navy"}}>
                       <TableRowColumn>{index + 1}</TableRowColumn>
                       <TableRowColumn>{this.state.users[data].name} </TableRowColumn>
                       <TableRowColumn>{this.state.users[data].email}</TableRowColumn>
                       <TableRowColumn>{this.state.users[data].age}</TableRowColumn>
                       <TableRowColumn>{this.state.users[data].gender} </TableRowColumn>
+                      <TableRowColumn>{this.state.users[data].bloodGroups} </TableRowColumn>
                     </TableRow>
                   );
                 })

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import {FlatButton, RaisedButton} from 'material-ui/';
-import logo from './logo.svg';
 import logo2 from './logo2.png';
 import './App.css';
 import {

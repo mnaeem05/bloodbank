@@ -46,6 +46,8 @@ export default class signup extends Component {
     this.handleChangeAge = this.handleChangeAge.bind(this);
     this.handlePwd1 = this.handlePwd1.bind(this);
     this.handleChangeMale = this.handleChangeMale.bind(this);
+    this.handlechangeSelect = this.handlechangeSelect.bind(this);
+
   }
 
   handleChangeUsername(event) {
@@ -67,17 +69,22 @@ export default class signup extends Component {
     // console.log(this.state.SelectedRadioButton)
   }
 
+  handlechangeSelect(event){
+        this.setState({selectOption: event.target.value},()=>{console.log(this.state.selectOption)}
+        );
+  }
+
   sendToFirebase(ev) {
     ev.preventDefault();
               firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.pwd1)
             .then((res) => {
                 if (res.uid) {
-          this.ref.child("users").push({ name: this.state.username, email: this.state.email, age: this.state.age, pwd1: this.state.pwd1, gender: this.state.SelectedRadioButton,});
+          this.ref.child("users").push({ name: this.state.username, email: this.state.email, age: this.state.age, pwd1: this.state.pwd1, gender: this.state.SelectedRadioButton, bloodGroups: this.state.selectOption,});
           this.setState({username:""})
           this.setState({email:""})
           this.setState({age:""})
           this.setState({pwd1:""})
-          // this.setState({male:""})    
+          // this.setState({Male:""})    
           window.location.href = "./" 
                     // document.getElementById("signup").style.display = 'none'
                     // document.getElementById("signin").style.display = 'block'
@@ -138,24 +145,25 @@ export default class signup extends Component {
       required
     /><br />
 <div id="box23">
-<input type="radio" name="gender" value="male" 
+<input type="radio" name="gender" value="Male" 
 /*onChange={this.handleChangeMale}*/
-checked={this.state.SelectedRadioButton === 'male'} 
+checked={this.state.SelectedRadioButton === 'Male'} 
 onChange={this.handleChangeMale} 
 /> Male
-<input type="radio" name="gender" value="female"
-checked={this.state.SelectedRadioButton === 'female'} 
+<input type="radio" name="gender" value="Female"
+checked={this.state.SelectedRadioButton === 'Female'} 
 onChange={this.handleChangeMale}
  /> Female
 </div>
 <div> 
-   <p id="box24">Blood groups <select name="Bloodgroups" id="box25"> <option value="select" required selected >--Select--</option>
+   <p id="box24">Blood groups <select name="Bloodgroups" id="box25" selectOption={this.state.value} onChange={this.handlechangeSelect} required > 
+        <option value="select" >--Select--</option>
         <option value="A">A</option>
         <option value="A+">A+</option>
         <option value="B">B</option>
         <option value="B+">B+</option>
+        <option value="AB+">AB+</option>
         <option value="O">O</option>
-        <option value="O+">O+</option>
     </select>
     </p>
    </div>

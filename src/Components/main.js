@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {AppBar, TextField, Checkbox, Drawer, RaisedButton, IconMenu, MenuItem, IconButton} from 'material-ui/';
+import {AppBar, TextField, Checkbox, Drawer, IconMenu, MenuItem, IconButton} from 'material-ui/';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import { Link } from 'react-router-dom';
