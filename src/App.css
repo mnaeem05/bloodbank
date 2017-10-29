@@ -1,0 +1,135 @@
+.App {
+  text-align: center;
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 90px;
+}
+
+.App-header {
+  background-color: #000059;
+  height: 120px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+ul{
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+.box03{
+    width: 90px;
+    height: 20px;
+    position: absolute;
+    top: 320px;
+    left: 150px;
+    background-color: #3DAE38;
+    border: 1px solid #3DAE38;
+    cursor: pointer;
+}
+.active:valid {
+  box-shadow: 0 0 5px 1px green;
+}
+.active:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.main1{
+  color: red;
+  font-size: 18px;
+}
+#box10{
+    height: 500px;
+    width: 1438px;
+    position: absolute;
+    top: 280px;
+    border: 100px;
+    background-color: #222222;
+    border: 1px solid #222222;
+}
+#box17{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
+    position: absolute;
+    left: 580px;
+    top: -25px;
+    font-size: 30px;
+}
+#box18{
+    border-style: solid;
+    border-width: 2px;
+    background-color: orangered;
+    color: orangered;
+    width: 300px;
+    left: 590px;
+    position: absolute;
+    top: 30px;   
+}
+#box19{
+    font-family: sans-serif;
+    color: whitesmoke;
+    position: absolute;
+    left: 420px;
+    top: 40px;
+    font-size: 15px;
+}
+#box20{
+    font-family: sans-serif;
+    color: whitesmoke;
+    position: absolute;
+    left: 580px;
+    top: 70px;
+    font-size: 15px;
+}
+#box21{
+    height: 80px;
+    left: 250px;
+    position: absolute;
+    left: 300px;
+    top: 150px;
+}
+#box22{
+    position: absolute;
+    top: 150px;
+    height: 90px;
+    left: 380px;
+}
+#box23{
+    position: absolute;
+    top: 510px;
+    left: 540px;
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+#box24{
+    position: absolute;
+    top: 535px;
+    left: 540px;
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+#box25{
+      font-family: cursive;
+    font-size: 15px;
+    color: grey;
+    border: 2px solid grey;
+    border-radius: 5px;
+
+}
