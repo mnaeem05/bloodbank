@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {AppBar, TextField, Checkbox, Drawer, IconMenu, MenuItem, IconButton} from 'material-ui/';
+import {AppBar, TextField, Checkbox, Drawer, MenuItem, IconButton} from 'material-ui/';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import { Link } from 'react-router-dom';
@@ -120,19 +120,6 @@ constructor(props) {
   render() {
     return (
         <div>
-    <IconMenu
-      style={styles.icon1}
-      iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
-      anchorOrigin={{horizontal: 'left', vertical: 'top'}}
-      targetOrigin={{horizontal: 'left', vertical: 'top'}}
-    >
-      <MenuItem primaryText="Account" />
-      <MenuItem primaryText="Settings" />
-      <MenuItem primaryText="Help" />
-      <MenuItem primaryText="Sign out" />
-    </IconMenu>
-
-
         <AppBar
     title="Blood Bank Online App"
     // iconClassNameRight="muidocs-icon-navigation-expand-more"

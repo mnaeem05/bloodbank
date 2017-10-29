@@ -133,3 +133,51 @@ ul{
     border-radius: 5px;
 
 }
+#box26{
+    height: 50px;
+    width: 60px;
+    left: 250px;
+    position: absolute;
+    left: 900px;
+    top: 300px;
+    border: 2px solid rgb(0, 188, 212);
+}
+#box27{
+    height: 60px;
+    position: absolute;
+    left: 600px;
+    top: 160px;
+}
+#box28{
+    height: 40px;
+    position: absolute;
+    left: 650px;
+    top: 240px;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+#box29{
+    height: 40px;
+    position: absolute;
+    left: 650px;
+    top: 300px;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+#box30{
+    height: 40px;
+    position: absolute;
+    left: 650px;
+    top: 360px;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+#box31{
+    height: 40px;
+    width: 120px;
+    position: absolute;
+    left: 650px;
+    top: 420px;
+    border: 2px solid green;
+    border-radius: 5px;
+}

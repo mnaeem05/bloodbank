@@ -5,6 +5,7 @@ import * as firebase from 'firebase';
 import CircularProgress from 'material-ui/CircularProgress';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import { Link } from 'react-router-dom';
+import bloodtypes from './bloodtypes.jpg';
 
 const styles = {
   box07: {
@@ -134,7 +135,9 @@ constructor(props) {
           <MenuItem onClick={this.handleClose} style={styles.box01}>Profile</MenuItem>
           <MenuItem onClick={this.handleClose} style={styles.box01}>Sign up</MenuItem>
         </Drawer> 
-        <h2 style={{color:'#ff7373', fontSize: '20', fontFamily: "monospace", cursor: 'pointer'}}> BLOOD BANK - SAMPLE REJECTION CRITERIA </h2>  
+        <h2 style={{color:'#ff7373', fontSize: '20', fontFamily: "monospace", cursor: 'pointer'}}> BLOOD BANK - SAMPLE REJECTION CRITERIA 
+        <a href="/static/media/bloodtypes.08e2e053.jpg" target="_blank" ><img id="box26" src={bloodtypes} alt="bloodtypes" title="Click here"/></a>
+          </h2>  
         <ul style={styles.box06}>
         <li>Insufficient sample – appropriate volume blood tubes are supplied with. Insufficient samples will mean an inability to test and delay in results and provision of blood products.</li>
         </ul>
@@ -157,7 +160,7 @@ constructor(props) {
                     <TableRow style={{color: "Navy"}}>
                       <TableRowColumn>{index + 1}</TableRowColumn>
                       <TableRowColumn>{this.state.users[data].name} </TableRowColumn>
-                      <TableRowColumn>{this.state.users[data].email}</TableRowColumn>
+                      <TableRowColumn>{this.state.users[data].email.toLowerCase()}</TableRowColumn>
                       <TableRowColumn>{this.state.users[data].age}</TableRowColumn>
                       <TableRowColumn>{this.state.users[data].gender} </TableRowColumn>
                       <TableRowColumn>{this.state.users[data].bloodGroups} </TableRowColumn>

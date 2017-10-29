@@ -11,6 +11,7 @@ import Dashboard from './Components/dashboard';
 import Contact from './Components/contact';
 import Home from './Components/Home';
 import SignUp from './Components/signup';
+import homeimg from './Components/homeimg.png';
 
 const styles = {
   box01:{
@@ -42,7 +43,8 @@ class App extends Component {
          <Router>
     <div>
         <ul>
-        <li><Link style={styles.box01} to="/Home">Home</Link></li>
+          <br/>
+        <li><Link style={styles.box01} to="/Home"><img id="box27" src={homeimg} alt="homeimg" title="Home"/></Link></li>
       </ul>
 
       <hr/>
