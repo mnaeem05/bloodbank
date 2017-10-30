@@ -172,7 +172,7 @@ constructor(props) {
             </TableBody>
           </Table>
           :
-          <CircularProgress />
+          <CircularProgress size="100" />
         }
       </div>
     )
