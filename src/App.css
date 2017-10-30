@@ -56,7 +56,7 @@ ul{
     height: 500px;
     width: 1438px;
     position: absolute;
-    top: 280px;
+    top: 290px;
     border: 100px;
     background-color: #222222;
     border: 1px solid #222222;
@@ -104,7 +104,7 @@ ul{
 }
 #box22{
     position: absolute;
-    top: 150px;
+    top: 140px;
     height: 90px;
     left: 380px;
 }
@@ -180,4 +180,49 @@ ul{
     top: 420px;
     border: 2px solid green;
     border-radius: 5px;
+}
+#box32{
+    position: absolute;
+    top: 150px;
+    height: 60px;
+    left: 480px;
+}
+#box33{
+    position: absolute;
+    top: 150px;
+    height: 60px;
+    left: 560px;
+}
+#box34{
+    position: absolute;
+    top: 130px;
+    height: 100px;
+    left: 640px;
+}
+#box35{
+    position: absolute;
+    top: 130px;
+    height: 80px;
+    left: 750px;
+}
+#box36{
+    position: absolute;
+    top: 140px;
+    height: 60px;
+    left: 830px;
+}
+#box37{
+    position: absolute;
+    top: 420px;
+    left: 1100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: whitesmoke;
+    font-size: 20px;
+
+}
+#box38{
+    position: absolute;
+    top: 140px;
+    height: 60px;
+    left: 1050px;
 }
