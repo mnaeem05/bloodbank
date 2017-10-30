@@ -70,7 +70,8 @@ export default class signup extends Component {
   }
 
   handlechangeSelect(event){
-        this.setState({selectOption: event.target.value},()=>{console.log(this.state.selectOption)}
+        this.setState({selectOption: event.target.value}
+        // ,()=>{console.log(this.state.selectOption)}
         );
   }
 
@@ -149,15 +150,17 @@ export default class signup extends Component {
 /*onChange={this.handleChangeMale}*/
 checked={this.state.SelectedRadioButton === 'Male'} 
 onChange={this.handleChangeMale} 
+required
 /> Male
 <input type="radio" name="gender" value="Female"
 checked={this.state.SelectedRadioButton === 'Female'} 
 onChange={this.handleChangeMale}
+required
  /> Female
 </div>
 <div> 
-   <p id="box24">Blood groups <select name="Bloodgroups" id="box25" selectOption={this.state.value} onChange={this.handlechangeSelect} required > 
-        <option value="select" >--Select--</option>
+   <p id="box24">Blood groups <select name="Bloodgroups" id="box25" selectOption={this.state.value} onChange={this.handlechangeSelect} > 
+        <option value="select" required>--Select--</option>
         <option value="A">A</option>
         <option value="A+">A+</option>
         <option value="B">B</option>

@@ -128,12 +128,12 @@ constructor(props) {
           width={200}
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}>
-          <MenuItem onClick={this.handleClose}>   
-        <Link style={styles.box01} to="/dashboard">Dashboard</Link>
-        </MenuItem>
-          <MenuItem onClick={this.handleClose} style={styles.box01}>Donor</MenuItem>
-          <MenuItem onClick={this.handleClose} style={styles.box01}>Profile</MenuItem>
-          <MenuItem onClick={this.handleClose} style={styles.box01}>Sign up</MenuItem>
+          <MenuItem onClick={this.handleClose}>
+          <Link style={styles.box01} to="/signup">Sign Up</Link>
+          </MenuItem>
+          <MenuItem onClick={this.handleClose}>
+          <Link style={styles.box01} to="/">Sign in</Link>
+          </MenuItem>
         </Drawer> 
         <h2 style={{color:'#ff7373', fontSize: '20', fontFamily: "monospace", cursor: 'pointer'}}> BLOOD BANK - SAMPLE REJECTION CRITERIA 
         <a href="/static/media/bloodtypes.08e2e053.jpg" target="_blank" ><img id="box26" src={bloodtypes} alt="bloodtypes" title="Click here"/></a>
@@ -172,7 +172,7 @@ constructor(props) {
             </TableBody>
           </Table>
           :
-          <CircularProgress />
+          <CircularProgress size="100" />
         }
       </div>
     )

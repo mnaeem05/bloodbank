@@ -135,9 +135,9 @@ constructor(props) {
           <MenuItem onClick={this.handleClose}>   
         <Link style={styles.box01} to="/dashboard">Dashboard</Link>
         </MenuItem>
-          <MenuItem onClick={this.handleClose} style={styles.box01}>Donor</MenuItem>
-          <MenuItem onClick={this.handleClose} style={styles.box01}>Profile</MenuItem>
-          <MenuItem onClick={this.handleClose} style={styles.box01}>Sign up</MenuItem>
+          <MenuItem onClick={this.handleClose}>
+          <Link style={styles.box01} to="/signup">Sign Up</Link>
+          </MenuItem>
         </Drawer>
         <h2 style={styles.boxlogin}>Login here</h2>
         <form onSubmit={this.handleSubmit}>
