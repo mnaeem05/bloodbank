@@ -84,6 +84,7 @@ constructor(props) {
     this.handleChangeUserPwd = this.handleChangeUserPwd.bind(this);
     
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.SignOut = this.SignOut.bind(this);
   }
 
   handleChangeUsername(event) {
@@ -108,7 +109,16 @@ constructor(props) {
     event.preventDefault();
   }
 
-  
+  SignOut(){
+  firebase.auth().signOut().then(function() {
+  // Sign-out successful.
+}).catch(function(error) {
+  // An error happened.
+});
+alert("Successfully Log Out");
+window.location.href = "./Home"
+}
+
 
   handleToggle = () => this.setState({open: !this.state.open});
   handleClose = () => this.setState({open: false});
@@ -133,6 +143,9 @@ constructor(props) {
           </MenuItem>
           <MenuItem onClick={this.handleClose}>
           <Link style={styles.box01} to="/">Sign in</Link>
+          </MenuItem>
+          <MenuItem onClick={this.handleClose}>
+          <p style={styles.box01} onClick={()=>{this.SignOut()}}> LogOut </p>
           </MenuItem>
         </Drawer> 
         <h2 style={{color:'#ff7373', fontSize: '20', fontFamily: "monospace", cursor: 'pointer'}}> BLOOD BANK - SAMPLE REJECTION CRITERIA 
