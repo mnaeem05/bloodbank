@@ -169,6 +169,7 @@ window.location.href = "./Home"
             <TableBody>
               {
                 Object.keys(this.state.users).map((data, index) => {
+{/*{if (this.state.users[data].bloodGroups == "A" || this.state.users[data].bloodGroups == "B")*/}
                   return (
                     <TableRow style={{color: "Navy"}}>
                       <TableRowColumn>{index + 1}</TableRowColumn>
@@ -179,6 +180,7 @@ window.location.href = "./Home"
                       <TableRowColumn>{this.state.users[data].bloodGroups} </TableRowColumn>
                     </TableRow>
                   );
+        {/*else ("error")}*/}
                 })
               }
 
