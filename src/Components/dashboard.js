@@ -74,16 +74,11 @@ ref = firebase.database().ref();
 constructor(props) {
     super(props);
     this.state = {
-      username:'',
-      email:'',
       value: '',
       open: false,
 };
 
-    this.handleChangeUsername = this.handleChangeUsername.bind(this);
-    this.handleChangeUserPwd = this.handleChangeUserPwd.bind(this);
     this.handlechangeSelect = this.handlechangeSelect.bind(this);    
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.SignOut = this.SignOut.bind(this);
   }
 
@@ -91,14 +86,6 @@ handlechangeSelect(event){
         this.setState({selectOption: event.target.value});
         // ,()=>{console.log(this.state.selectOption)}
   }
-
-  handleChangeUsername(event) {
-    this.setState({username: event.target.value});
-  }
-   handleChangeUserPwd(event) {
-    this.setState({pwd: event.target.value});
-  }
-
     componentDidMount() {
     this.ref.child("users").on("value", (snapshot) => {
       let data = snapshot.val();
@@ -106,13 +93,6 @@ handlechangeSelect(event){
     })
   }
 
-  handleSubmit(event) {
-    console.log('User Name: ' + this.state.username);
-    console.log('User Password: ' + this.state.pwd);
-    this.setState({username:''});
-    this.setState({pwd:''});
-    event.preventDefault();
-  }
 
   SignOut(){
   firebase.auth().signOut().then(function() {
@@ -136,8 +116,6 @@ window.location.href = "./Home"
     // iconClassNameRight="muidocs-icon-navigation-expand-more"
     iconElementLeft={<IconButton><Menu  onClick={this.handleToggle}/></IconButton>}
     /> 
-        
-        
         <Drawer           
           docked={false}
           width={200}
@@ -174,8 +152,8 @@ window.location.href = "./Home"
             <TableBody>
               {
                 Object.keys(this.state.users).map((data, index) => {
-console.log(this.state.selectOption)
-{if (this.state.users[data].bloodGroups == this.state.selectOption)
+
+{if (this.state.users[data].bloodGroups == this.state.selectOption )
                   return (
                     <TableRow style={{color: "Navy"}}>
                       <TableRowColumn>{index + 1}</TableRowColumn>
@@ -186,6 +164,7 @@ console.log(this.state.selectOption)
                       <TableRowColumn>{this.state.users[data].bloodGroups} </TableRowColumn>
                     </TableRow>
                   );
+else (this.state.users[data])
 }
         }
                 )
@@ -203,6 +182,7 @@ console.log(this.state.selectOption)
         <option value="B+">B+</option>
         <option value="AB+">AB+</option>
         <option value="O">O</option>
+        <option value="All">All</option>
     </select>
     </p>
       </div>
