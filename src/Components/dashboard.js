@@ -82,9 +82,14 @@ constructor(props) {
 
     this.handleChangeUsername = this.handleChangeUsername.bind(this);
     this.handleChangeUserPwd = this.handleChangeUserPwd.bind(this);
-    
+    this.handlechangeSelect = this.handlechangeSelect.bind(this);    
     this.handleSubmit = this.handleSubmit.bind(this);
     this.SignOut = this.SignOut.bind(this);
+  }
+
+handlechangeSelect(event){
+        this.setState({selectOption: event.target.value});
+        // ,()=>{console.log(this.state.selectOption)}
   }
 
   handleChangeUsername(event) {
@@ -169,7 +174,8 @@ window.location.href = "./Home"
             <TableBody>
               {
                 Object.keys(this.state.users).map((data, index) => {
-{/*{if (this.state.users[data].bloodGroups == "A" || this.state.users[data].bloodGroups == "B")*/}
+console.log(this.state.selectOption)
+{if (this.state.users[data].bloodGroups == this.state.selectOption)
                   return (
                     <TableRow style={{color: "Navy"}}>
                       <TableRowColumn>{index + 1}</TableRowColumn>
@@ -180,15 +186,25 @@ window.location.href = "./Home"
                       <TableRowColumn>{this.state.users[data].bloodGroups} </TableRowColumn>
                     </TableRow>
                   );
-        {/*else ("error")}*/}
-                })
+}
+        }
+                )
               }
-
             </TableBody>
           </Table>
           :
           <CircularProgress size="100" />
         }
+        <p id="box39">Blood groups <select name="Bloodgroups" id="box40" selectOption={this.state.value} onChange={this.handlechangeSelect} > 
+        <option value="select" required>--Select--</option>
+        <option value="A">A</option>
+        <option value="A+">A+</option>
+        <option value="B">B</option>
+        <option value="B+">B+</option>
+        <option value="AB+">AB+</option>
+        <option value="O">O</option>
+    </select>
+    </p>
       </div>
     )
   }
