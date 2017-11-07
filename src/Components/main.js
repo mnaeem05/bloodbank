@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import {AppBar, TextField, Checkbox, Drawer, MenuItem, IconButton} from 'material-ui/';
-import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
+import {AppBar, TextField, Drawer, MenuItem, IconButton} from 'material-ui/'
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import { Link } from 'react-router-dom';
 import * as firebase from 'firebase';
@@ -30,8 +29,8 @@ const styles = {
     fontWeight: 'bold',
     borderRadius: 10,
     position: 'relative',
-    left: 590,
-    top: 80,
+    left: 750,
+    top: 10,
   },
   boxlogin:{
     fontWeight: 'bold',
@@ -88,7 +87,7 @@ constructor(props) {
     this.setState({username:''});
     this.setState({pwd:''});
     event.preventDefault();
-      this.signin()    
+    this.signin()    
   }
   signin() {
        firebase.auth().signInWithEmailAndPassword(this.state.username, this.state.pwd)
@@ -132,12 +131,12 @@ constructor(props) {
           width={200}
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}>
-          <MenuItem onClick={this.handleClose}>   
-        <Link style={styles.box01} to="/dashboard">Dashboard</Link>
-        </MenuItem>
           <MenuItem onClick={this.handleClose}>
           <Link style={styles.box01} to="/signup">Sign Up</Link>
           </MenuItem>
+            <MenuItem onClick={this.handleClose}>   
+        <Link style={styles.box01} to="/contact">Contact</Link>
+        </MenuItem>
         </Drawer>
         <h2 style={styles.boxlogin}>Login here</h2>
         <form onSubmit={this.handleSubmit}>
@@ -155,12 +154,6 @@ constructor(props) {
       maxLength= '8'
       value={this.state.pwd || ''} onChange={this.handleChangeUserPwd}
     /><br />
-          <div style={styles.block}>
-        <Checkbox
-          label="I Agree"
-          required
-          style={styles.checkbox}/>
-    </div>
     <button value="Submit" style={styles.button3}> Submit </button>
     </form>
     </div>
