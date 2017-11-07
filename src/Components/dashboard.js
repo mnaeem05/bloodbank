@@ -104,6 +104,9 @@ alert("Successfully Log Out");
 window.location.href = "./Home"
 }
 
+hello(){
+  alert("Mobile No Address")
+}
 
   handleToggle = () => this.setState({open: !this.state.open});
   handleClose = () => this.setState({open: false});
@@ -157,7 +160,7 @@ window.location.href = "./Home"
                   return (
                     <TableRow style={{color: "Navy"}}>
                       <TableRowColumn>{index + 1}</TableRowColumn>
-                      <TableRowColumn>{this.state.users[data].name} </TableRowColumn>
+                      <TableRowColumn> <span onClick={this.hello}> {this.state.users[data].name} </span> </TableRowColumn>
                       <TableRowColumn>{this.state.users[data].email.toLowerCase()}</TableRowColumn>
                       <TableRowColumn>{this.state.users[data].age}</TableRowColumn>
                       <TableRowColumn>{this.state.users[data].gender} </TableRowColumn>
@@ -168,7 +171,7 @@ else if (this.state.selectOption == "All")
 return(
                     <TableRow style={{color: "Navy"}}>
                       <TableRowColumn>{index + 1}</TableRowColumn>
-                      <TableRowColumn>{this.state.users[data].name} </TableRowColumn>
+                      <TableRowColumn> <span onClick={this.hello}> {this.state.users[data].name} </span> </TableRowColumn>
                       <TableRowColumn>{this.state.users[data].email.toLowerCase()}</TableRowColumn>
                       <TableRowColumn>{this.state.users[data].age}</TableRowColumn>
                       <TableRowColumn>{this.state.users[data].gender} </TableRowColumn>
