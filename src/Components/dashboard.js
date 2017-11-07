@@ -153,7 +153,7 @@ window.location.href = "./Home"
               {
                 Object.keys(this.state.users).map((data, index) => {
 
-{if (this.state.users[data].bloodGroups == this.state.selectOption )
+{if (this.state.users[data].bloodGroups == this.state.selectOption ){
                   return (
                     <TableRow style={{color: "Navy"}}>
                       <TableRowColumn>{index + 1}</TableRowColumn>
@@ -163,8 +163,19 @@ window.location.href = "./Home"
                       <TableRowColumn>{this.state.users[data].gender} </TableRowColumn>
                       <TableRowColumn>{this.state.users[data].bloodGroups} </TableRowColumn>
                     </TableRow>
-                  );
-else (this.state.users[data])
+                  );}
+else if (this.state.selectOption == "All")
+return(
+                    <TableRow style={{color: "Navy"}}>
+                      <TableRowColumn>{index + 1}</TableRowColumn>
+                      <TableRowColumn>{this.state.users[data].name} </TableRowColumn>
+                      <TableRowColumn>{this.state.users[data].email.toLowerCase()}</TableRowColumn>
+                      <TableRowColumn>{this.state.users[data].age}</TableRowColumn>
+                      <TableRowColumn>{this.state.users[data].gender} </TableRowColumn>
+                      <TableRowColumn>{this.state.users[data].bloodGroups} </TableRowColumn>
+                    </TableRow>
+)
+
 }
         }
                 )
