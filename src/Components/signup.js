@@ -109,8 +109,6 @@ export default class signup extends Component {
     render() {
     return (
         <div>
-        <div id="box41"></div>
-    <marquee behavior="" direction="top"><h3 id="box42">Note: Three to Four months time between donations is a very safe interval. You can donate again within three months.</h3></marquee>
         <h2 style={styles.box02} >Create Account</h2>
         <form  onSubmit={this.sendToFirebase.bind(this)}>
         <TextField
