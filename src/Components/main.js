@@ -119,6 +119,8 @@ constructor(props) {
   render() {
     return (
         <div>
+                    <div id="box41"></div>
+    <marquee behavior="" direction="top"><h3 id="box42">Note: Three to Four months time between donations is a very safe interval. You can donate again within three months.</h3></marquee>
         <AppBar
     title="Blood Bank Online App"
     // iconClassNameRight="muidocs-icon-navigation-expand-more"
